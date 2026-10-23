@@ -1,0 +1,37 @@
+# general
+# jupyter
+# fastapi
+matplotlib
+# ipykernel
+# confluent-kafka>=2.3.0
+
+# specialized indices for GPU and NVIDIA binaries
+--extra-index-url https://download.pytorch.org/whl/cu126
+--extra-index-url https://pypi.nvidia.com
+# pytorch
+torch>=2.5.0
+torchvision
+torchaudio
+# pennylane
+# pennylane>=0.40.0
+# pennylane-lightning
+# general ml
+numpy>=2.1.0
+pandas>=2.2.0
+
+# data-provider
+yfinance==1.2.0
+
+# Testing
+pytest
+pytest-mock
+
+# code-quality / cicd
+pre-commit
+black>=25.1.0
+ruff 
+pytest
+
+
+# JAX with CUDA
+# jax[cuda13]

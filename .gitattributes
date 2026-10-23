@@ -1,0 +1,2 @@
+# Force markdown files to be treated as text with UTF-8 encoding
+*.md text eol=lf
