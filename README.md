@@ -33,8 +33,8 @@ regime-governed-stochastic-neural-sde/
 
 ## Key Mathematical Components
 1. Conditional Neural Jump-Diffusion SDE: Formulates a positivity-preserving hazard rate process $\lambda_t$ driven by neural drift $\mu_\theta$, square-root diffusion $\sigma_\theta$, and an inhomogeneous Poisson jump process $N_t$ calibrated via a Straight-Through Estimator (STE).
-2. Extrema-Regularized Rockafellar–Uryasev $\operatorname{CVaR}_\alpha$ Objective: Combines variational dual $\operatorname{CVaR}_{0.99}$ minimization with a Softmax Extrema Regularizer weighted by pathwise quadratic jump variation $Q_T = \sum_m \|\Delta Y_{t_m}\|_2^2$ to eliminate tail-gradient starvation.
-3. Macro-Gated Mixture of Experts (MoE): Partitions state information into local plant coordinates ($\mathcal{I}_t$) and regime routing context ($\mathcal{Z}_t = X_t \oplus \mathcal{M}_t$). Features mutual-information load balancing ($\mathcal{L}_{\text{gate}}$) and expert-specific structural inductive biases ($\operatorname{SoftShrink}$ dead-zone, diffusive tracker, unanchored jump reset).
+2. Extrema-Regularized Rockafellar–Uryasev $\mathrm{CVaR}_\alpha$ Objective: Combines variational dual $\mathrm{CVaR}_{0.99}$ minimization with a Softmax Extrema Regularizer weighted by pathwise quadratic jump variation $Q_T = \sum_m \|\Delta Y_{t_m}\|_2^2$ to eliminate tail-gradient starvation.
+3. Macro-Gated Mixture of Experts (MoE): Partitions state information into local plant coordinates ($\mathcal{I}_t$) and regime routing context ($\mathcal{Z}_t = X_t \oplus \mathcal{M}_t$). Features mutual-information load balancing ($\mathcal{L}_{\text{gate}}$) and expert-specific structural inductive biases ($\mathrm{SoftShrink}$ dead-zone, diffusive tracker, unanchored jump reset).
 
 ## Installation & Setup
 
@@ -77,7 +77,7 @@ python experiments/03_evaluate_baselines.py
 > This compares the Monolithic MLP Baseline against Dense MoE and Top-1 Sparse MoE out-of-sample across 10,000 fresh trajectories
 
 ## Out-of-Sample Results
-Out-of-sample $\operatorname{CVaR}_{0.99}$ Net Hedging Loss (BPS) under strict $\mathcal{G}_t$-adapted causal rollouts:
+Out-of-sample $\mathrm{CVaR}_{0.99}$ Net Hedging Loss (BPS) under strict $\mathcal{G}_t$-adapted causal rollouts:
 
 | Macro Regime | Monolithic MLP | MoE (Dense) | MoE (Top-1 Sparse) | MoE Gain (Dense) |
 | --- | --- | --- | --- | --- |
